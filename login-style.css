@@ -13,8 +13,17 @@ body {
     background-color: black;
 }
 
+.btn-success {
+    background-color: rgb(30, 215, 96);
+}
+
 .container {
+    height: 4.8vw;
     width: 50vw;
     margin: auto;
     text-align: center;
+}
+
+.pass-forgot {
+    color
 }

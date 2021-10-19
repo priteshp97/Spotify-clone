@@ -16,6 +16,7 @@ body {
     rgba(18, 18, 18, 1) 29%
   );
   margin-left: 250px;
+  margin-bottom: 6rem;
 }
 
 p {
@@ -116,6 +117,10 @@ main {
   color: hsl(0, 0%, 80%);
 }
 
+.player-left-icon:hover {
+  color: white;
+}
+
 .player-middle-bar {
   height: 5px;
   width: 73%;
@@ -151,9 +156,23 @@ main {
   padding-bottom: 0;
 }
 
+.player-middle-icon:hover {
+  color: white;
+}
+
 .player-middle-icon-play {
   color: hsl(0, 0%, 100%);
   font-size: 2rem;
+}
+
+.player-middle-icon-play {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  transition: 0.2s ease-in;
+}
+
+.player-middle-icon-play:hover {
+  transform: scale(1.1);
 }
 
 .fill {
@@ -181,6 +200,10 @@ main {
 
 .player-right-icon {
   padding: 1rem;
+}
+
+.player-right-icon:hover {
+  color: white;
 }
 
 .fill-right {
@@ -213,13 +236,21 @@ main {
   max-width: 16rem;
 }
 
+.small-artist-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
 .album {
   font-size: 1rem;
   color: white;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .detail {
@@ -243,10 +274,34 @@ main {
   font-size: 2rem;
 }
 
+.album-icon:hover {
+  color: white;
+}
+
 .album-icon-play {
   color: hsl(141, 72%, 41%);
   padding-right: 1rem;
   font-size: 3.5rem;
+  position: relative;
+  transition: 0.2s ease-in;
+}
+
+.album-icon-play:hover {
+  transform: scale(1.1);
+}
+
+.album-icon-play::after {
+  content: "";
+  background-color: white;
+  border-radius: 2rem;
+  width: 3rem;
+  height: 2.6rem;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 hr {
@@ -256,10 +311,11 @@ hr {
 
 .song {
   display: grid;
-  grid-template-columns: 0.04fr 0.45fr 0.5fr;
+  grid-template-columns: 0.03fr 0.45fr 0.5fr;
   align-items: center;
   padding: 0.5rem 3rem 0.5rem 2rem;
   transition: 0.1s ease-in-out;
+  column-gap: 0.5rem;
 }
 
 .song-first {

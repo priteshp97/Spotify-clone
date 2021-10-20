@@ -4,24 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify Clone</title>
+    <title>Spotify | Album Page</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+
     <script
       src="https://kit.fontawesome.com/fbd41d9953.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="artist.css" />
   </head>
   <body>
     <!-- nav bar -->
     <nav
       class="
-        row
         justify-content-between
         navbar navbar-expand-lg navbar-light
         px-5
@@ -56,9 +56,6 @@
             </svg>
             Diego 'Ziba'...
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="login-page.html">Log Out</a>
-          </div>
         </div>
       </div>
     </nav>
@@ -89,12 +86,12 @@
               font-size: large;
             "
           >
-            Spotify &reg;
+            Spotify
           </p>
         </span>
         <br>
         <br>
-        <a href="/homePage.html"
+        <a href="/homePage.html" 
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -242,275 +239,247 @@
       </div>
     </aside>
     <!-- end of side bar -->
-    <!-- album -->
 
-    <section id="album">
-      <div class="wrap">
-        <div class="album-container">
-          <div class="album-img-container">
-            <img src="./assets/album.png" alt="album cover" class="img" />
-          </div>
+    <!-- header -->
 
-          <div class="album-content">
-            <h3 class="album">ALBUM</h3>
-
-            <h1 class="title">Certified Lover Boy</h1>
-
-            <h3 class="detail">
-              <img src="assets/drake.jpg " alt="" class="small-artist-img" />
-              Drake
-              <span class="detail-span">- 2021 - 21 songs, 1 hr 26 min</span>
-            </h3>
-          </div>
+    <header class="header">
+      <div class="wrapper header-container">
+        <div class="header-verified">
+          <i class="fas fa-check-circle header-verified-icon"></i>
+          <p>Verified Artist</p>
         </div>
-
-        <div class="song-icons">
-          <i class="fas fa-play-circle album-icon-play"></i>
-
-          <i class="far fa-heart album-icon"></i>
-          <i class="fas fa-ellipsis-h album-icon"></i>
+        <div class="header-artist">
+          <p>Drake</p>
+        </div>
+        <div class="header-listeners">
+          <p>62,010,228 monthly listeners</p>
         </div>
       </div>
-    </section>
+    </header>
+    <!-- end of header -->
 
-    <section class="song-list">
-      <div class="wrap">
-        <div class="grid-container">
-          <!-- song -->
-          <div class="song song-first">
-            <div class="left-number">
-              <p class="column">#</p>
-            </div>
-            <div class="left-title">
-              <p class="column">TITLE</p>
-            </div>
-            <div class="right-time">
-              <p class="column">Time</p>
-            </div>
-          </div>
-          <!-- end of song -->
-          <hr />
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>1</p>
-            </div>
-            <div class="left-title">
-              <p>Champagne Poetry<br /><span class="title-span">Drake</span></p>
-            </div>
-            <div class="right-time">
-              <p>5:36</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>2</p>
-            </div>
-            <div class="left-title">
-              <p>Papi's Home<br /><span class="title-span">Drake</span></p>
-            </div>
-            <div class="right-time">
-              <p>2:58</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>3</p>
-            </div>
-            <div class="left-title">
-              <p>
-                Girls Want Girls (with Lil Baby) <br /><span class="title-span"
-                  >Drake, Lil Baby</span
-                >
-              </p>
-            </div>
-            <div class="right-time">
-              <p>3:41</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>4</p>
-            </div>
-            <div class="left-title">
-              <p>
-                In The Bible (with Lil Durk & Giveon) <br /><span
-                  class="title-span"
-                  >Drake, Lil Durk, Giveon</span
-                >
-              </p>
-            </div>
-            <div class="right-time">
-              <p>4:56</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>5</p>
-            </div>
-            <div class="left-title">
-              <p>
-                Love All (with JAY-Z) <br /><span class="title-span"
-                  >Drake, JAY-Z</span
-                >
-              </p>
-            </div>
-            <div class="right-time">
-              <p>3:48</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>6</p>
-            </div>
-            <div class="left-title">
-              <p>
-                Fair Trade (with Travis Scott)<br /><span class="title-span"
-                  >Drake, Travis Scott</span
-                >
-              </p>
-            </div>
-            <div class="right-time">
-              <p>4:51</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>7</p>
-            </div>
-            <div class="left-title">
-              <p>
-                Way 2 Sexy (with Future & Young Thug)<br /><span
-                  class="title-span"
-                  >Drake, Future, Young Thug</span
-                >
-              </p>
-            </div>
-            <div class="right-time">
-              <p>4:17</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>8</p>
-            </div>
-            <div class="left-title">
-              <p>TSU<br /><span class="title-span">Drake</span></p>
-            </div>
-            <div class="right-time">
-              <p>5:08</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>9</p>
-            </div>
-            <div class="left-title">
-              <p>N 2 Deep<br /><span class="title-span">Drake, Future</span></p>
-            </div>
-            <div class="right-time">
-              <p>4:33</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>10</p>
-            </div>
-            <div class="left-title">
-              <p>Pipe Down<br /><span class="title-span">Drake</span></p>
-            </div>
-            <div class="right-time">
-              <p>3:25</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>11</p>
-            </div>
-            <div class="left-title">
-              <p>
-                Yebba's Heartbreak<br /><span class="title-span"
-                  >Drake, Yebba</span
-                >
-              </p>
-            </div>
-            <div class="right-time">
-              <p>2:13</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>12</p>
-            </div>
-            <div class="left-title">
-              <p>
-                No Friends In The Industry<br /><span class="title-span"
-                  >Drake</span
-                >
-              </p>
-            </div>
-            <div class="right-time">
-              <p>3:24</p>
-            </div>
-          </div>
-          <!-- end of song -->
-
-          <!-- song -->
-          <div class="song">
-            <div class="left-number">
-              <p>13</p>
-            </div>
-            <div class="left-title">
-              <p>
-                Knife Talk (with 21 Savage ft. Project Pat)<br /><span
-                  class="title-span"
-                  >Drake, 21 Savage, Project Pat</span
-                >
-              </p>
-            </div>
-            <div class="right-time">
-              <p>4:02</p>
-            </div>
-          </div>
-          <!-- end of song -->
+    <!-- artist popular songs -->
+    <section class="popular">
+      <div class="wrapper">
+        <!-- buttons -->
+        <div class="popular-icons">
+          <i class="fas fa-play-circle popular-icon-play"></i>
+          <button class="btn-follow">FOLLOW</button>
+          <i class="fas fa-ellipsis-h popular-icon"></i>
         </div>
+        <!-- end of buttons -->
+        <div class="popular-grid">
+          <div class="popular-grid-left">
+            <h3 class="popular-left-title">Popular</h3>
+            <div class="popular-grid-left-inner">
+              <!-- start of song -->
+              <div class="popular-inner-song">
+                <p class="popular-inner-number">1</p>
+                <img
+                  src="./assets/album.png"
+                  alt=""
+                  class="popular-inner-img"
+                />
+                <p class="popular-inner-song-name">
+                  Way 2 Sexy (with Future & Young Thug)
+                </p>
+                <p class="popular-inner-listens">149,925,606</p>
+                <p class="popular-inner-time">4:17</p>
+              </div>
+              <!-- end of song -->
+              <!-- start of song -->
+              <div class="popular-inner-song">
+                <p class="popular-inner-number">2</p>
+                <img
+                  src="./assets/album.png"
+                  alt=""
+                  class="popular-inner-img"
+                />
+                <p class="popular-inner-song-name">
+                  Way 2 Sexy (with Future & Young Thug)
+                </p>
+                <p class="popular-inner-listens">149,925,606</p>
+                <p class="popular-inner-time">4:17</p>
+              </div>
+              <!-- end of song -->
+              <!-- start of song -->
+              <div class="popular-inner-song">
+                <p class="popular-inner-number">3</p>
+                <img
+                  src="./assets/album.png"
+                  alt=""
+                  class="popular-inner-img"
+                />
+                <p class="popular-inner-song-name">
+                  Way 2 Sexy (with Future & Young Thug)
+                </p>
+                <p class="popular-inner-listens">149,925,606</p>
+                <p class="popular-inner-time">4:17</p>
+              </div>
+              <!-- end of song -->
+              <!-- start of song -->
+              <div class="popular-inner-song">
+                <p class="popular-inner-number">4</p>
+                <img
+                  src="./assets/album.png"
+                  alt=""
+                  class="popular-inner-img"
+                />
+                <p class="popular-inner-song-name">
+                  Way 2 Sexy (with Future & Young Thug)
+                </p>
+                <p class="popular-inner-listens">149,925,606</p>
+                <p class="popular-inner-time">4:17</p>
+              </div>
+              <!-- end of song -->
+              <!-- start of song -->
+              <div class="popular-inner-song">
+                <p class="popular-inner-number">5</p>
+                <img
+                  src="./assets/album.png"
+                  alt=""
+                  class="popular-inner-img"
+                />
+                <p class="popular-inner-song-name">
+                  Way 2 Sexy (with Future & Young Thug)
+                </p>
+                <p class="popular-inner-listens">149,925,606</p>
+                <p class="popular-inner-time">4:17</p>
+              </div>
+              <!-- end of song -->
+              <p class="see-more">SEE MORE</p>
+            </div>
+          </div>
+          <div class="popular-grid-right">
+            <h3 class="popular-right-title">Artist pick</h3>
+            <div class="popular-right-inner">
+              <img src="./assets/drake.jpg" alt="" class="popular-right-img" />
+              <div class="popular-right-inner-content">
+                <div class="popular-right-inner-content-title">
+                  <img src="./assets/drake.jpg" alt="" />
+                  <span>MAJID JORDAN FRIDAY !</span>
+                </div>
+                <p class="ovo">OVO Sound</p>
+                <p class="right-inner-playlist">Playlist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- popular releases -->
+        <h1 class="popular-rel-title">Popular releases</h1>
+        <div class="popular-rel">
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">
+              Last Releases
+              <span class="dot">.</span> Album
+            </p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+        </div>
+        <!-- end of popular releases -->
+
+        <!-- popular releases -->
+        <h1 class="popular-rel-title">Albums</h1>
+        <div class="popular-rel">
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+          <!-- start of card -->
+          <div class="popular-rel-card">
+            <img src="./assets/album.png" alt="" class="popular-rel-card-img" />
+            <p class="popular-rel-card-album">Certified Lover Boy</p>
+            <p class="popular-rel-card-text">Last Releases . Album</p>
+          </div>
+          <!-- end of card -->
+        </div>
+        <!-- end of popular releases -->
       </div>
     </section>
-    <!-- end of album -->
-
+    <!-- end of artist popular songs -->
     <!-- music player -->
     <footer class="music-player">
       <!-- start of left side -->
@@ -569,7 +538,6 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
-
-    <script src="app.js"></script>
+    <script src="artist.js"></script>
   </body>
 </html>

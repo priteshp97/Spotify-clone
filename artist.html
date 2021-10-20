@@ -29,8 +29,8 @@
       "
     >
       <div>
-        <img class="nav-icons pr-2" src="assets\arrow-left.png" alt="" />
-        <img class="nav-icons" src="assets\arrow-right.png" alt="" />
+        <a href=""><img class="nav-icons pr-2" src="assets\arrow-left.png" alt="" /></a>
+        <a href=""><img class="nav-icons" src="assets\arrow-right.png" alt="" /></a>
       </div>
       <div>
         <div class="btn-group">
@@ -91,7 +91,7 @@
         </span>
         <br>
         <br>
-        <a href="/homePage.html" 
+        <a href="/homePage.html" style="padding-top: 20px"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -264,7 +264,7 @@
         <!-- buttons -->
         <div class="popular-icons">
           <i class="fas fa-play-circle popular-icon-play"></i>
-          <button class="btn-follow">FOLLOW</button>
+          <button class="btn">FOLLOW</button>
           <i class="fas fa-ellipsis-h popular-icon"></i>
         </div>
         <!-- end of buttons -->
@@ -502,13 +502,21 @@
         <div class="player-middle-icons">
           <i class="fas fa-random player-middle-icon"></i>
           <i class="fas fa-step-backward player-middle-icon"></i>
-          <i
+          <a id="ASong" onClick="playPause()">
+            <audio
+              src="Drake ft. Future _N 2 Deep_ (Music Video).mp3"
+              autoplay
+              loop
+            ></audio>
+            <i
             class="
               fas
               fa-play-circle
               player-middle-icon player-middle-icon-play
             "
-          ></i>
+          >
+        </i>
+      </a>
           <i class="fas fa-step-forward player-middle-icon"></i>
           <i class="fas fa-exchange-alt player-middle-icon"></i>
         </div>

@@ -14,24 +14,29 @@
   <body>
 
     <!-- Main Logo-->
-    <div class="container pt-3 mt-3">
-        <img class="center-block" src="assets\Spotify_Logo_CMYK_Black.png" alt="" height, width="180">
+    <div class="container">
+      <div class="row">
+        <div class="container pt-2 mt-3">
+          <img src="assets\Spotify_Logo_CMYK_Black.png" alt="" height, width="165">
+        </div>
+      </div>
     </div>
+    <hr>
     
 
     <div class="container">
+      <div class="col-md-6 offset-md-3">
         <!-- Login with other social -->
-        <span><strong>To continue, log in to Spotify.</strong></span>
+        <span id="first-text"><strong>To continue, log in to Spotify.</strong></span>
 
         <div>
-            <button type="button" class="btn btn-primary btn-block" style="border-radius: 20px;"><img src="assets\f_logo_RGB-White_100.png" alt="" height, width="14">CONTINUE WITH FACEBOOK</button>
-            <br>
-            <button type="button" class="btn btn-dark btn-block" style="border-radius: 20px;"><img src="assets\pngkey.com-ibooks-logo-png-2757097.png" alt="" height, width="14">CONTINUE WITH APPLE</button>
+            <button type="button" class="btn btn-primary btn-block" style="border-radius: 20px;"><img class="btn-icon" src="assets\f_logo_RGB-White_100.png" alt="" height, width="14">CONTINUE WITH FACEBOOK</button>
+            <button type="button" class="btn btn-dark btn-block" style="border-radius: 20px;"><img class="btn-icon" src="assets\pngkey.com-ibooks-logo-png-2757097.png" alt="" height, width="14">CONTINUE WITH APPLE</button>
         </div>
         
         <div style="width: 100%; height: 14px; border-bottom: 1px solid rgb(228, 228, 228); text-align: center">
           <span style="font-size: 12px; background-color: white; padding: 0 10px;">
-            OR
+            <strong>OR</strong>
           </span>
         </div>
         <br>
@@ -45,12 +50,28 @@
           <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
         </div>
 
-        <input type="checkbox">Remember me
-        <button type="button" class="btn btn-success" onclick="document.location='testinganimation.html'" style="border-radius: 20px;">LOG IN</button>
-        <br>
 
-        <a class="pass-forgot" style="color: rgb(30, 215, 96); cursor: pointer;">Forgot your password?</a>
-        <br><hr>
+        <div class="row">
+          <div class="col-6">
+            <form>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                <label class="custom-control-label" for="customCheck">Remember me</label>
+              </div>
+            </form>
+          </div>
+          
+          <div class="col-6">
+            <button type="button" class="btn btn-success btn-block" onclick="document.location='homePage.html'" style="border-radius: 20px;">LOG IN</button>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <a class="pass-forgot" style="color: rgb(30, 215, 96); cursor: pointer;">Forgot your password?</a>
+        </div>
+        
+        
+        <hr>
 
         <!-- Sign up -->
         <div>Don't have an account?</div>
@@ -58,7 +79,7 @@
         <hr>
 
         <span>If you click "Log in with Facebook" and are not a Spotify user, you will be registered and you agree to Spotify's <span style="color: rgb(30, 215, 96);">Terms & Conditions</span> and <span style="color: rgb(30, 215, 96);">Privacy Policy.</span></span>
-
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

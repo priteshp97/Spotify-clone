@@ -1,335 +1,934 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify | Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600;700&display=swap');
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600;700&display=swap");
     body {
-        background: rgb(108,21,21);
-        background: linear-gradient(180deg, rgba(108,21,21,1) 0%, rgba(23,23,23,1) 24%);
-        background-repeat: no-repeat;
-        font-family: 'Signika',sans-serif;
-        color: hsl(0,0%,100%);
-        height: 110vh;
+      background: rgb(108, 21, 21);
+      background: linear-gradient(
+        180deg,
+        rgba(108, 21, 21, 1) 0%,
+        rgba(23, 23, 23, 1) 24%
+      );
+      background-repeat: no-repeat;
+      font-family: "Signika", sans-serif;
+      color: hsl(0, 0%, 100%);
+      height: 110vh;
     }
     .carbon-example {
-    padding: 8px;
-    background-color: inherit;
-    background: rgb(92, 75, 75);
-    width: 295px;
-    box-sizing: border-box;
-    border-radius: 6px;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    align-items: flex-start;
-    
-    z-index: 5;
-    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
-    margin-top:20px;
+      padding: 8px;
+      background-color: inherit;
+      background: rgb(92, 75, 75);
+      width: 295px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      -moz-align-items: flex-start;
+      align-items: flex-start;
+
+      z-index: 5;
+      box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
     }
-    .carbon-example:hover{
+    .carbon-example:hover {
       color: springgreen;
       transform: scale(1.1);
       transition: 0.4s ease-in-out;
     }
     .carbon-example img {
-    margin-right: 9px;
-    max-width: 125px;
+      margin-right: 9px;
+      max-width: 125px;
     }
     .carbon-example .inner-wrapper {
-    text-align: left;
+      text-align: left;
     }
     .carbon-example .inner-wrapper p {
-    font-size: 12px;
-    line-height: 1.33;
-    margin: 8px 0;
+      font-size: 12px;
+      line-height: 1.33;
+      margin: 8px 0;
     }
     .carbon-example .inner-wrapper p.fine-print {
-    font-size: 8px;
-    color: #C5CDD0;
-    line-height: 1.25;
-    text-transform: uppercase;
-    font-weight: 500;
+      font-size: 8px;
+      color: #c5cdd0;
+      line-height: 1.25;
+      text-transform: uppercase;
+      font-weight: 500;
     }
     .flex-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    justify-content: space-between;
-    width: 260px;
-    height: 70px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between;
+      width: 260px;
+      height: 70px;
     }
-    .card:hover{
-            transform: scale(1.1);
-            transition:0.4s ease-in-out;
-            cursor: pointer;
-            color: springgreen;
-        }
-
- </style>
- <body>
-  
-        <div class="container mt-5 pt-5">
-            <h4>Good morning</h4>
-            <div class="container"> 
-            <div class="row row-cols-5">
-              <div class="col pr-0" style="display: flex; justify-content: space-between;">
-                <div class="carbon-example flex-wrapper" style="position: relative;">
-                    <img src="/Good morning/1.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                    <div class="inner-wrapper" style="position:static; padding-left: 70px;">
-                      <p>Burning Jazz-rock Fusion</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col pr-0" style="display: flex; justify-content: space-between;">
-                <div class="carbon-example flex-wrapper" style="position: relative;" >
-                    <img src="/Good morning/Favourite.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                    <div class="inner-wrapper" style="position:static; padding-left: 74px;">
-                      <p>Liked Songs</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col pr-0" style="display: flex; justify-content: space-between;">
-                <div class="carbon-example flex-wrapper" style="position: relative;">
-                    <img src="/Good morning/3.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                    <div class="inner-wrapper" style="position:static; padding-left: 74px;">
-                      <p>Metal Ballads</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="display: flex; justify-content: space-between;">
-                <div class="carbon-example flex-wrapper" style="position: relative;">
-                    <img src="/Good morning/4.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                    <div class="inner-wrapper" style="position:static; padding-left: 74px;">
-                        <p>POST HUMAN: SURVIVAL</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="display: flex; justify-content: space-between;">
-                <div class="carbon-example flex-wrapper" style="position: relative;">
-                    <img src="/Good morning/5.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                    <div class="inner-wrapper" style="position:static; padding-left: 74px;">
-                      <p>This Joe Bonamassa</p>
-                    </div>
-                </div>
+    .card:hover {
+      transform: scale(1.1);
+      transition: 0.4s ease-in-out;
+      cursor: pointer;
+      color: springgreen;
+    }
+  </style>
+  <body>
+    <div class="container mt-5 pt-5">
+      <h4>Good morning</h4>
+      <div class="container">
+        <div class="row row-cols-5">
+          <div
+            class="col pr-0"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="./Good morning/1.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 70px"
+              >
+                <p>Burning Jazz-rock Fusion</p>
               </div>
             </div>
-            <div class="row row-cols-5">
-                <div class="col pr-0" style="display: flex; justify-content: space-between;">
-                    <div class="carbon-example flex-wrapper" style="position: relative;">
-                        <img src="/Good morning/6.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                        <div class="inner-wrapper" style="position:static; padding-left: 74px;">
-                          <p>Midian</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col pr-0" style="display: flex; justify-content: space-between;">
-                    <div class="carbon-example flex-wrapper" style="position: relative;" >
-                        <img src="/Good morning/7.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                        <div class="inner-wrapper" style="position:static; padding-left: 74px;">
-                          <p>Nymphetamine</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col pr-0" style="display: flex; justify-content: space-between;">
-                    <div class="carbon-example flex-wrapper" style="position: relative;">
-                        <img src="/Good morning/8.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                        <div class="inner-wrapper" style="position:static; padding-left: 74px;">
-                          <p>Amo</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col" style="display: flex; justify-content: space-between;">
-                    <div class="carbon-example flex-wrapper" style="position: relative;">
-                        <img src="/Good morning/9.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                        <div class="inner-wrapper" style="position:static; padding-left: 74px;">
-                            <p>LE BASK</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col" style="display: flex; justify-content: space-between;">
-                    <div class="carbon-example flex-wrapper" style="position: relative;">
-                        <img src="/Good morning/10.png" style="position: absolute; left: 0px; top: 0px; height:70px; object-fit: cover; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" alt="example design logo">
-                        <div class="inner-wrapper" style="position:static; padding-left: 74px;">
-                          <p>Opeth</p>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-          </div> 
-    </div>
-    <br>
-    <br>
-    <div class="container" style="position: relative;">
-        <h4>Recently played</h4>
-        <a href="#" class="seeAll" style="position: absolute; top: 10px; right:24px; color: rgb(156, 157, 158); font-size: smaller;">SEE ALL</a>
-        <div class="container">
-            <div class="row row-cols-8">
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                <div class="card" style="width: 8rem; height: 200px; background-color:rgb(41, 40, 40);">
-                    <img src="/recently played/1.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                      <strong>Burning Jazz-rock...</strong>
-                      <p style="font-size:xx-small; color: rgb(156, 157, 158);">You'll find fiery, modern, groovy, jazz-...</p>
-                    </div>
-                  </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/recently played/2.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <strong>Metal Ballads</strong>
-                        <p style="font-size:xx-small; color: rgb(156, 157, 158);">A collection of the best metal ballads</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/recently played/3.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <strong>Midian</strong>
-                        <p style="font-size:xx-small; color: rgb(156, 157, 158);">Candle of Filth</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/recently played/4.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <strong>Liked Songs</strong>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/recently played/5.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px; border-radius: 50%;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <strong>LE BASK</strong>
-                        <p style="font-size:xx-small; color: rgb(156, 157, 158);">Artist</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/recently played/6.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <strong>POST HUMAN:S...</strong>
-                        <p style="font-size:xx-small; color: rgb(156, 157, 158);">Bring Me The Horizon</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/recently played/7.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <strong>This is Joe Bonam...</strong>
-                        <p style="font-size:xx-small; color: rgb(156, 157, 158);">This is Joe Bonamassa. The essential tracks, ...</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/recently played/8.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;">
-                        <strong>Nymphetamine</strong>
-                        <p style="font-size:xx-small; color: rgb(156, 157, 158);">Crade Of Filth</p>
-                    </div>
-                </div>
+          </div>
+          <div
+            class="col pr-0"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="./Good morning/Favourite.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 74px"
+              >
+                <p>Liked Songs</p>
               </div>
             </div>
-          </div>  
-    </div>
-    <br>
-    <br>
-    <div class="container" style="position: relative;">
-        <h4>Shows to try</h4>
-        <p style="color: rgb(156, 157, 158); font-size:small;">Podcasts we think you'll get hooked on.</p>
-        <a href="#seeAll" style="position: absolute; top: 40px; right:24px; color: rgb(156, 157, 158); font-size: smaller;">SEE ALL</a>
-        <div class="container">
-            <div class="row row-cols-8" >
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                <div class="card" style="width: 8rem; height: 200px; background-color:rgb(41, 40, 40);">
-                    <img src="/Shows to try/1.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px; border-radius: 12px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                      <p class="card-text"><strong>Burning Jazz-rock...</strong></p>
-                    </div>
-                  </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/Shows to try/2.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px; border-radius: 12px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <p class="card-text"><strong>Metal Ballads</strong></p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/Shows to try/3.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px; border-radius: 12px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <p class="card-text"><strong>Midian</strong></p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/Shows to try/4.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px; border-radius: 12px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <p class="card-text"><strong>Liked Songs</strong></p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/Shows to try/5.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px; border-radius: 12px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <p class="card-text"><strong>LE BASK</strong></p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/Shows to try/6.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px; border-radius: 12px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <p class="card-text"><strong>POST HUMAN:S...</strong></p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/Shows to try/7.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px; border-radius: 12px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: x-small;" >
-                        <p class="card-text"><strong>This is Joe Bonam...</strong></p>
-                    </div>
-                </div>
-              </div>
-              <div class="col" style="padding-left: 0px; padding-right: 0px;">
-                  <div class="card" style="width: 8rem; height: 200px; background-color: rgb(41, 40, 40);">
-                    <img src="/Shows to try/8.png" class="card-img-top" style="position: absolute; width: 110px; top: 9px; left: 8px; border-radius: 12px;" alt="...">
-                    <div class="card-body" style="position: absolute; top: 120px; left: -10px; font-size: small;">
-                        <p class="card-text"><strong>Nymphetamine</strong></p>
-                    </div>
-                </div>
+          </div>
+          <div
+            class="col pr-0"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="./Good morning/3.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 74px"
+              >
+                <p>Metal Ballads</p>
               </div>
             </div>
-          </div>  
+          </div>
+          <div
+            class="col"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="./Good morning/4.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 74px"
+              >
+                <p>POST HUMAN: SURVIVAL</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="./Good morning/5.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 74px"
+              >
+                <p>This Joe Bonamassa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-5">
+          <div
+            class="col pr-0"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="/Good morning/6.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 74px"
+              >
+                <p>Midian</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col pr-0"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="/Good morning/7.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 74px"
+              >
+                <p>Nymphetamine</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col pr-0"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="/Good morning/8.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 74px"
+              >
+                <p>Amo</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="/Good morning/9.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 74px"
+              >
+                <p>LE BASK</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col"
+            style="display: flex; justify-content: space-between"
+          >
+            <div class="carbon-example flex-wrapper" style="position: relative">
+              <img
+                src="/Good morning/10.png"
+                style="
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  height: 70px;
+                  object-fit: cover;
+                  border-top-left-radius: 6px;
+                  border-bottom-left-radius: 6px;
+                "
+                alt="example design logo"
+              />
+              <div
+                class="inner-wrapper"
+                style="position: static; padding-left: 74px"
+              >
+                <p>Opeth</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+    <br />
+    <br />
+    <div class="container" style="position: relative">
+      <h4>Recently played</h4>
+      <a
+        href="#"
+        class="seeAll"
+        style="
+          position: absolute;
+          top: 10px;
+          right: 24px;
+          color: rgb(156, 157, 158);
+          font-size: smaller;
+        "
+        >SEE ALL</a
+      >
+      <div class="container">
+        <div class="row row-cols-8">
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/recently played/1.png"
+                class="card-img-top"
+                style="position: absolute; width: 110px; top: 9px; left: 8px"
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <strong>Burning Jazz-rock...</strong>
+                <p style="font-size: xx-small; color: rgb(156, 157, 158)">
+                  You'll find fiery, modern, groovy, jazz-...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/recently played/2.png"
+                class="card-img-top"
+                style="position: absolute; width: 110px; top: 9px; left: 8px"
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <strong>Metal Ballads</strong>
+                <p style="font-size: xx-small; color: rgb(156, 157, 158)">
+                  A collection of the best metal ballads
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/recently played/3.png"
+                class="card-img-top"
+                style="position: absolute; width: 110px; top: 9px; left: 8px"
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <strong>Midian</strong>
+                <p style="font-size: xx-small; color: rgb(156, 157, 158)">
+                  Candle of Filth
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/recently played/4.png"
+                class="card-img-top"
+                style="position: absolute; width: 110px; top: 9px; left: 8px"
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <strong>Liked Songs</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/recently played/5.png"
+                class="card-img-top"
+                style="
+                  position: absolute;
+                  width: 110px;
+                  top: 9px;
+                  left: 8px;
+                  border-radius: 50%;
+                "
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <strong>LE BASK</strong>
+                <p style="font-size: xx-small; color: rgb(156, 157, 158)">
+                  Artist
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/recently played/6.png"
+                class="card-img-top"
+                style="position: absolute; width: 110px; top: 9px; left: 8px"
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <strong>POST HUMAN:S...</strong>
+                <p style="font-size: xx-small; color: rgb(156, 157, 158)">
+                  Bring Me The Horizon
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/recently played/7.png"
+                class="card-img-top"
+                style="position: absolute; width: 110px; top: 9px; left: 8px"
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <strong>This is Joe Bonam...</strong>
+                <p style="font-size: xx-small; color: rgb(156, 157, 158)">
+                  This is Joe Bonamassa. The essential tracks, ...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/recently played/8.png"
+                class="card-img-top"
+                style="position: absolute; width: 110px; top: 9px; left: 8px"
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <strong>Nymphetamine</strong>
+                <p style="font-size: xx-small; color: rgb(156, 157, 158)">
+                  Crade Of Filth
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="container" style="position: relative">
+      <h4>Shows to try</h4>
+      <p style="color: rgb(156, 157, 158); font-size: small">
+        Podcasts we think you'll get hooked on.
+      </p>
+      <a
+        href="#seeAll"
+        style="
+          position: absolute;
+          top: 40px;
+          right: 24px;
+          color: rgb(156, 157, 158);
+          font-size: smaller;
+        "
+        >SEE ALL</a
+      >
+      <div class="container">
+        <div class="row row-cols-8">
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/Shows to try/1.png"
+                class="card-img-top"
+                style="
+                  position: absolute;
+                  width: 110px;
+                  top: 9px;
+                  left: 8px;
+                  border-radius: 12px;
+                "
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <p class="card-text"><strong>Burning Jazz-rock...</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/Shows to try/2.png"
+                class="card-img-top"
+                style="
+                  position: absolute;
+                  width: 110px;
+                  top: 9px;
+                  left: 8px;
+                  border-radius: 12px;
+                "
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <p class="card-text"><strong>Metal Ballads</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/Shows to try/3.png"
+                class="card-img-top"
+                style="
+                  position: absolute;
+                  width: 110px;
+                  top: 9px;
+                  left: 8px;
+                  border-radius: 12px;
+                "
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <p class="card-text"><strong>Midian</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/Shows to try/4.png"
+                class="card-img-top"
+                style="
+                  position: absolute;
+                  width: 110px;
+                  top: 9px;
+                  left: 8px;
+                  border-radius: 12px;
+                "
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <p class="card-text"><strong>Liked Songs</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/Shows to try/5.png"
+                class="card-img-top"
+                style="
+                  position: absolute;
+                  width: 110px;
+                  top: 9px;
+                  left: 8px;
+                  border-radius: 12px;
+                "
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <p class="card-text"><strong>LE BASK</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/Shows to try/6.png"
+                class="card-img-top"
+                style="
+                  position: absolute;
+                  width: 110px;
+                  top: 9px;
+                  left: 8px;
+                  border-radius: 12px;
+                "
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <p class="card-text"><strong>POST HUMAN:S...</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/Shows to try/7.png"
+                class="card-img-top"
+                style="
+                  position: absolute;
+                  width: 110px;
+                  top: 9px;
+                  left: 8px;
+                  border-radius: 12px;
+                "
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: x-small;
+                "
+              >
+                <p class="card-text"><strong>This is Joe Bonam...</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 0px; padding-right: 0px">
+            <div
+              class="card"
+              style="
+                width: 8rem;
+                height: 200px;
+                background-color: rgb(41, 40, 40);
+              "
+            >
+              <img
+                src="/Shows to try/8.png"
+                class="card-img-top"
+                style="
+                  position: absolute;
+                  width: 110px;
+                  top: 9px;
+                  left: 8px;
+                  border-radius: 12px;
+                "
+                alt="..."
+              />
+              <div
+                class="card-body"
+                style="
+                  position: absolute;
+                  top: 120px;
+                  left: -10px;
+                  font-size: small;
+                "
+              >
+                <p class="card-text"><strong>Nymphetamine</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

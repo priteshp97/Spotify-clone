@@ -27,6 +27,12 @@ main {
   margin-left: 250px;
 }
 
+/* nav bar */
+
+nav {
+  background-color: transparent;
+}
+
 /* side bar */
 
 .sidebar {

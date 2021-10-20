@@ -252,8 +252,8 @@ nav {
   background: rgb(34, 34, 34);
   background: linear-gradient(
     180deg,
-    rgba(34, 34, 34, 1) 10%,
-    rgba(18, 18, 18, 1) 35%
+    rgba(34, 34, 34, 1) 4%,
+    rgba(12, 12, 12, 1) 20%
   );
   padding-top: 1.5rem;
 }
@@ -307,8 +307,12 @@ nav {
 
 .popular-grid {
   display: grid;
-  grid-template-columns: 0.72fr 0.28fr;
+  grid-template-columns: 0.65fr 0.35fr;
   padding-top: 1.5rem;
+}
+
+.popular-grid-right {
+  padding-left: 2rem;
 }
 
 .popular-left-title {
@@ -317,11 +321,20 @@ nav {
 
 .popular-inner-song {
   display: grid;
-  grid-template-columns: 3% 6% 50% 30% 30%;
+  grid-template-columns: 3% 6% 52% 32% 1%;
   align-items: center;
-  padding-top: 1rem;
-  padding-left: 1.5rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
   color: hsl(0, 0%, 70%);
+  border-radius: 0.5rem;
+}
+
+.popular-inner-song:first-of-type {
+  margin-top: 1rem;
+}
+
+.popular-inner-song:hover {
+  background-color: hsl(0, 0%, 20%);
 }
 
 .popular-inner-img {
@@ -405,12 +418,31 @@ nav {
 }
 
 .popular-rel-card {
-  background-color: hsl(0, 0%, 12%);
+  background-color: hsl(0, 0%, 10%);
   padding: 1rem;
-  max-width: 11.5rem;
+  max-width: 12rem;
+  transition: 0.2s ease-in;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.popular-rel-card:hover {
+  background-color: hsl(0, 0%, 20%);
 }
 
 .popular-rel-card-img {
   max-width: 100%;
   height: auto;
+}
+
+.popular-rel-card-album {
+  color: white;
+  padding: 1rem 0rem 0.25rem 0rem;
+  font-weight: 500;
+}
+
+.popular-rel-card-text {
+  color: hsl(0, 0%, 70%);
+  font-size: 0.85rem;
+  padding-bottom: 0.5rem;
 }

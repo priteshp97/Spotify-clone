@@ -12,6 +12,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/fbd41d9953.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600;700&display=swap");
@@ -25,29 +29,56 @@
       background-repeat: no-repeat;
       font-family: "Signika", sans-serif;
       color: hsl(0, 0%, 100%);
-      height: 110vh;
+      margin-left: 250px;
       margin-bottom: 6rem;
     }
     
   </style>
   <body>
     <!-- navbar -->
-    <nav class="row justify-content-between navbar navbar-expand-lg navbar-light">
+    <nav
+      class="
+        row
+        justify-content-between
+        navbar navbar-expand-lg navbar-light
+        px-5
+        py-3
+      "
+    >
       <div>
-          <img class="nav-icons pr-2" src="assets\arrow-left.png" alt="">
-          <img class="nav-icons" src="assets\arrow-right.png" alt="">
+        <img class="nav-icons pr-2" src="assets\arrow-left.png" alt="" />
+        <img class="nav-icons" src="assets\arrow-right.png" alt="" />
       </div>
       <div>
-          <div class="btn-group">
-              <button class="btn btn-dark btn-sm dropdown-toggle" style="border-radius: 20px;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                    </svg>
-                  Diego 'Ziba'...
-              </button>
+        <div class="btn-group">
+          <button
+            class="btn btn-dark btn-sm dropdown-toggle"
+            style="border-radius: 20px"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+              />
+            </svg>
+            Diego 'Ziba'...
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="login-page.html">Log Out</a>
           </div>
+        </div>
       </div>
-  </nav>
+    </nav>
     <aside>
       <!-- Top section of sidebar -->
       <div class="sidebar">
@@ -231,7 +262,7 @@
     </aside>
     <!-- end of side bar -->
     <!-- album -->
-    <div class="container mt-3 pt-3 ml-2">
+    <div class="container mt-3 pt-3 ml-2" >
       
       <div class="container">
         <h4>Good morning</h4>
@@ -258,7 +289,7 @@
                 class="inner-wrapper"
                 style="position: static; padding-left: 70px"
               >
-                <p>Burning Jazz-rock Fusion</p>
+                <p onclick="document.location='album.html'">Burning Jazz-rock Fusion</p>
               </div>
             </div>
           </div>
@@ -310,7 +341,7 @@
                 class="inner-wrapper"
                 style="position: static; padding-left: 74px"
               >
-                <p>Metal Ballads</p>
+                <p onclick="document.location='album.html'">Metal Ballads</p>
               </div>
             </div>
           </div>
@@ -336,7 +367,7 @@
                 class="inner-wrapper"
                 style="position: static; padding-left: 74px"
               >
-                <p>POST HUMAN: SURVIVAL</p>
+                <p onclick="document.location='album.html'">POST HUMAN: SURVIVAL</p>
               </div>
             </div>
           </div>
@@ -362,7 +393,7 @@
                 class="inner-wrapper"
                 style="position: static; padding-left: 74px"
               >
-                <p>This Joe Bonamassa</p>
+                <p onclick="document.location='album.html'">This Joe Bonamassa</p>
               </div>
             </div>
           </div>
@@ -390,7 +421,7 @@
                 class="inner-wrapper"
                 style="position: static; padding-left: 74px"
               >
-                <p>Midian</p>
+                <p onclick="document.location='album.html'">Midian</p>
               </div>
             </div>
           </div>
@@ -416,7 +447,7 @@
                 class="inner-wrapper"
                 style="position: static; padding-left: 74px"
               >
-                <p>Nymphetamine</p>
+                <p onclick="document.location='album.html'">Nymphetamine</p>
               </div>
             </div>
           </div>
@@ -442,7 +473,7 @@
                 class="inner-wrapper"
                 style="position: static; padding-left: 74px"
               >
-                <p>Amo</p>
+                <p onclick="document.location='album.html'">Amo</p>
               </div>
             </div>
           </div>
@@ -468,7 +499,7 @@
                 class="inner-wrapper"
                 style="position: static; padding-left: 74px"
               >
-                <p>LE BASK</p>
+                <p onclick="document.location='album.html'">LE BASK</p>
               </div>
             </div>
           </div>
@@ -494,7 +525,7 @@
                 class="inner-wrapper"
                 style="position: static; padding-left: 74px"
               >
-                <p>Opeth</p>
+                <p onclick="document.location='album.html'">Opeth</p>
               </div>
             </div>
           </div>
@@ -502,7 +533,7 @@
       </div>
     </div>
     <br />
-    <div class="container" style="position: relative">
+    <div class="container mt-3 pt-3 ml-1" style="position: relative;">
       <h4>Recently played</h4>
       <a
         href="#"
@@ -526,6 +557,8 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
+
             >
               <img
                 src="/Home-page/recently played/1.png"
@@ -542,7 +575,7 @@
                   font-size: x-small;
                 "
               >
-                <strong>Burning Jazz-rock...</strong>
+                <strong  onclick="document.location='album.html'">Burning Jazz-rock...</strong>
                 <p style="font-size: xx-small; color: rgb(156, 157, 158)">
                   You'll find fiery, modern, groovy, jazz-...
                 </p>
@@ -557,6 +590,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/recently played/2.png"
@@ -588,6 +622,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/recently played/3.png"
@@ -619,6 +654,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/recently played/4.png"
@@ -647,6 +683,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/recently played/5.png"
@@ -684,6 +721,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/recently played/6.png"
@@ -715,6 +753,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/recently played/7.png"
@@ -746,6 +785,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/recently played/8.png"
@@ -773,7 +813,7 @@
       </div>
     </div>
     <br />
-    <div class="container" style="position: relative">
+    <div class="container mt-3 pt-3 ml-2" style="position: relative">
       <h4>Shows to try</h4>
       <p style="color: rgb(156, 157, 158); font-size: small">
         Podcasts we think you'll get hooked on.
@@ -799,6 +839,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/Shows to try/1.png"
@@ -833,6 +874,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/Shows to try/2.png"
@@ -867,6 +909,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/Shows to try/3.png"
@@ -901,6 +944,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/Shows to try/4.png"
@@ -935,6 +979,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/Shows to try/5.png"
@@ -969,6 +1014,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/Shows to try/6.png"
@@ -1003,6 +1049,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/Shows to try/7.png"
@@ -1037,6 +1084,7 @@
                 height: 200px;
                 background-color: rgb(41, 40, 40);
               "
+              onclick="document.location='album.html'"
             >
               <img
                 src="/Home-page/Shows to try/8.png"

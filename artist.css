@@ -20,6 +20,7 @@ p {
 
 .wrapper {
   padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 /* nav bar */
@@ -306,7 +307,7 @@ nav {
 
 .popular-grid {
   display: grid;
-  grid-template-columns: 0.66fr 0.34fr;
+  grid-template-columns: 0.72fr 0.28fr;
   padding-top: 1.5rem;
 }
 
@@ -334,11 +335,15 @@ nav {
 }
 
 .see-more {
-  color: hsl(0, 0%, 61%);
+  color: hsl(0, 0%, 75%);
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 500;
   padding-top: 1.5rem;
   padding-left: 1.5rem;
+}
+
+.see-more:hover {
+  color: white;
 }
 
 .popular-right-title {
@@ -382,4 +387,30 @@ nav {
 
 .right-inner-playlist {
   color: hsl(0, 0%, 70%);
+}
+
+/* popular releases */
+
+.popular-rel-title {
+  color: white;
+  padding-top: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.popular-rel {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 0.5rem;
+}
+
+.popular-rel-card {
+  background-color: hsl(0, 0%, 12%);
+  padding: 1rem;
+  max-width: 11.5rem;
+}
+
+.popular-rel-card-img {
+  max-width: 100%;
+  height: auto;
 }

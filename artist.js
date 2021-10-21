@@ -22,3 +22,29 @@ var aud = document.getElementById("ASong").children[0];
     }
     isPlaying = !isPlaying;
   }
+function loginCredentialCheck(){
+  usernameCheck()
+}
+
+  function usernameCheck(){
+    var email="bpm@gmail.com"
+    var user="bpm"
+    let userMailNode=document.getElementById("user/email").value
+    if(userMailNode==email||userMailNode==user){
+      passwordCheck()
+    }
+    else{
+      alert("go")
+    }
+  }
+
+  function passwordCheck(){
+    var password="spotify"
+    let passwordFieldNode=document.getElementById("passwordField").value
+    if(passwordFieldNode==password){
+      window.location.href="testinganimation.html"
+    }
+    else{
+      alert("Wrong password! try again")
+    }
+  }

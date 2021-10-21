@@ -264,6 +264,14 @@ nav {
   font-size: 1rem;
 }
 
+.album-link {
+  color: white;
+}
+
+.album-link:hover {
+  color: white;
+}
+
 .detail-span {
   color: hsl(0, 4%, 59%);
 }
@@ -430,7 +438,6 @@ hr {
   justify-content: space-between;
   width: 260px;
   height: 70px;
-  
 }
 .card:hover {
   transform: scale(1.1);

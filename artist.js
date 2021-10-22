@@ -9,6 +9,12 @@ for (let i = 1; i <= songs.length; i++) {
     number[i - 1].innerHTML = `<p class="popular-inner-number">${i}</p>`;
   });
 }
+
+// play/pause animation
+function myFunction(x) {
+  x.classList.toggle("fa-stop-circle"); 
+}
+
 // audio track
 var aud = document.getElementById("ASong").children[0];
   var isPlaying = false;

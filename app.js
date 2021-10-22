@@ -9,3 +9,5 @@ for (let i = 1; i < number.length; i++) {
     number[i].innerHTML = `<p>${i}</p>`;
   });
 }
+
+

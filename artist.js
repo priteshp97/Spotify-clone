@@ -58,8 +58,7 @@ function loginCredentialCheck(){
   //MUTE
   function muteFuntion(){
     var x=document.getElementById("ASong").children[0];
-    x.volume=0.1
-    
+    x.muted=true;
   }
 // VOlUME
   function outputUpdate(vol) {

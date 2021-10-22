@@ -1164,10 +1164,13 @@
       <!-- end of middle -->
       <!-- start of right -->
       <div class="player-right">
+        
         <i class="fas fa-stream player-right-icon"></i>
         <i class="fas fa-laptop-house player-right-icon"></i>
-        <i class="fas fa-volume-up player-right-icon"></i>
-        <div class="fill-right"></div>
+        <a href="#" onclick="muteFuntion()" style="color: rgb(199, 199, 199);"><i class="fas fa-volume-up player-right-icon"  ></i></a>
+        <label for=fader></label>
+        <input type=range min=0 max=100 value=50 id=fader step=10  style="color: lawngreen;"  onchange="outputUpdate(value)">
+        <output for=fader id=volume></output>
       </div>
       <!-- end of right -->
     </footer>

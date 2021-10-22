@@ -55,3 +55,16 @@ function loginCredentialCheck(){
       passwordFieldNode.style.color="Red"
     }
   }
+  //MUTE
+  function muteFuntion(){
+    var x=document.getElementById("ASong").children[0];
+    x.volume=0.1
+    
+  }
+// VOlUME
+  function outputUpdate(vol) {
+
+    document.querySelector("#volume").value = vol
+    var song=document.getElementById("ASong").children[0];
+    song.volume=vol/100.0;
+  }

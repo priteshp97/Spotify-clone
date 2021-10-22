@@ -22,3 +22,36 @@ var aud = document.getElementById("ASong").children[0];
     }
     isPlaying = !isPlaying;
   }
+  //login credentials
+function loginCredentialCheck(){
+  usernameCheck()
+}
+
+  function usernameCheck(){
+    var email="bpm@gmail.com"
+    var user="bpm"
+    let userMailNode=document.getElementById("user/email")
+    if(userMailNode.value==email||userMailNode.value==user){
+      passwordCheck()
+    }
+    else{
+      userMailNode.style.borderColor="red";
+      userMailNode.style.color="red"
+    }
+  }
+
+  function passwordCheck(){
+    var password="spotify"
+    let passwordFieldNode=document.getElementById("passwordField")
+    
+    if(passwordFieldNode.value==password){
+      window.location.href="testinganimation.html"
+    }
+    else if(passwordFieldNode.value==null){
+      alert("please enter password")
+    }
+    else{
+      passwordFieldNode.style.borderColor="Red"
+      passwordFieldNode.style.color="Red"
+    }
+  }

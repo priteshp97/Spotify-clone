@@ -134,7 +134,7 @@
           </svg>
           Search</a
         >
-        <a href="#clients"
+        <a href="/album.html"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -1136,14 +1136,13 @@
         <div class="player-middle-icons">
           <i class="fas fa-random player-middle-icon"></i>
           <i class="fas fa-step-backward player-middle-icon"></i>
-          <a id="ASong" onclick="playPause()">
+          <a id="ASong" onClick="playPause()">
             <audio
               src="Drake ft. Future _N 2 Deep_ (Music Video).mp3"
               autoplay
               loop
             ></audio>
-            <i 
-              onclick="myFunction(this)"
+            <i
               class="
                 fas
                 fa-play-circle
@@ -1170,8 +1169,8 @@
         <i class="fas fa-laptop-house player-right-icon"></i>
         <a href="#" onclick="muteFuntion()" style="color: rgb(199, 199, 199);"><i class="fas fa-volume-up player-right-icon"  ></i></a>
         <label for=fader></label>
-        <input type=range min=0 max=100 value=50 id=fader step=10 style="width: 80px; height: 3px;"  onchange="outputUpdate(value)">
-        <output for=fader ></output>
+        <input type=range min=0 max=100 value=50 id=fader step=10  style="width: 80px; height: 3px;"  onchange="outputUpdate(value)">
+        <output for=fader id=volume></output>
       </div>
       <!-- end of right -->
     </footer>
